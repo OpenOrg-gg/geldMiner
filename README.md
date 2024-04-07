@@ -1,22 +1,19 @@
 
-# 0xBitcoin ERC20 Token Miner
+# Geld ERC20 Token Miner
 
-LICENSE GPL
+The following repo is based on the 0xBitcoin miner.
 
-Solves proof of work to mine supported ERC20 tokens.  This is a CPU miner. (See Releases for links to GPU miners.)
+This software has not been extensively tested nor updated for Geld.
 
+Only the *BASIC* CPU miner model, when build from source, is confirmed working.
 
+Given how hold this repo is, there is risk of supply chain attacks or other vulns in upstream packages that have not been vetted.
 
-### Update 1.6 - Config Files For Days
+You should *ONLY* mine Geld with a new fresh wallet.
 
-This new build uses miner-config.js for setting parameters and no longer has an active command line.  If you do not have an Ethereum account, it is recommended that you use Metamask to generate one.
+To proceed, build from source and use the miner-config-sample.json to create your config file named miner-config.json 
 
-
-### Official Releases Downloads
-
-[Download Packaged Releases](https://github.com/0xbitcoin/0xbitcoin-miner/blob/master/RELEASES.md)
-
-
+You'll need to ensure your wallet has enough ETH to pay gas fees.
 
 ### Building from Source
 
@@ -69,13 +66,6 @@ REMINDER: You >can< set the web3provider to a ropsten, mainnet, or other type of
 1. Duplicate the 'miner-config-sample.json' file and rename it to 'miner-config.json'
 2. Set the parameters in this file appropriately
 3. In the console, run the command 'node index.js' to start mining
-
-
-
-### Pool Mining
-- When mining into a pool, your gasprice does not matter and you will pay NO GAS FEES  
-- Every pool is different so consult each pool owner.  Typically, pools will offer a token withdraw mechanism or automatically send tokens to your address on a periodic basis or when a limit is reached
-
 
 ### Solo Mining
 - IF SOLO MINING it is necessary to fill the mining account (it is an Ethereum account) with a small amount of ether.  
