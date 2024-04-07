@@ -204,6 +204,7 @@ module.exports =  {
               this.miningTarget = miningParameters.miningTarget
 
                console.log("New mining target: 0x" + this.miningTarget.toString(16));
+               console.log("unconverted target: " + this.miningTarget);
                CPUMiner.setDifficultyTarget("0x" + this.miningTarget.toString(16));
              }
 
